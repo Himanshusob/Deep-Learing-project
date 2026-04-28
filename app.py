@@ -151,16 +151,36 @@ if uploaded:
 
 if run and path:
 
-    res=analyze_image_full("checkpoints/final_model.h5",path)
+    # Model temporarily disabled
+    # res=analyze_image_full("checkpoints/final_model.h5",path)
 
-    model_label=res["model_label"]
-    model_prob=res["model_prob"]
+    res = {
+        "model_label": "fake",
+        "model_prob": 0.5,
+        "ela_variance": 0,
+        "noise_mean_var": 0,
+        "clone_matches": 0,
+        "scores": {
+            "ela": 50,
+            "exif": 50,
+            "clone": 50,
+            "noise": 50,
+            "final": 50
+        },
+        "ela_arr": path,
+        "clone_vis": None,
+        "noise_vis": path,
+        "explanation": ["Model disabled for deployment test"]
+    }
 
-    ela_var=res["ela_variance"]
-    noise_var=res["noise_mean_var"]
-    clone_matches=res["clone_matches"]
+    model_label = res["model_label"]
+    model_prob = res["model_prob"]
 
-    scores=res["scores"]
+    ela_var = res["ela_variance"]
+    noise_var = res["noise_mean_var"]
+    clone_matches = res["clone_matches"]
+
+    scores = res["scores"]
 
 # ---------------- ORIGINAL ----------------
 

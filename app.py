@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import uuid
 import plotly.graph_objects as go
 from streamlit_image_comparison import image_comparison
 
@@ -142,10 +143,13 @@ with col2:
 
 path=None
 
+import uuid
+
 if uploaded:
-    img=Image.open(uploaded)
-    img.save("temp.jpg")
-    path="temp.jpg"
+    img = Image.open(uploaded)
+    filename = f"temp_{uuid.uuid4().hex}.jpg"
+    img.save(filename)
+    path = filename
 
 # ---------------- ANALYSIS ----------------
 

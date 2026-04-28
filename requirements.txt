@@ -2,7 +2,6 @@ numpy
 opencv-python-headless
 Pillow
 matplotlib
-tensorflow-cpu==2.10.0
 scikit-learn
 streamlit
 streamlit-image-comparison

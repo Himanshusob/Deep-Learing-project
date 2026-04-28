@@ -1,9 +1,10 @@
 numpy
-opencv-python
+opencv-python-headless
 Pillow
 matplotlib
-tensorflow>=2.10
+tensorflow-cpu==2.10.0
 scikit-learn
 streamlit
 tqdm
 seaborn
+gunicorn

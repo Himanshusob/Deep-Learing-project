@@ -4,7 +4,7 @@ import uuid
 import plotly.graph_objects as go
 from streamlit_image_comparison import image_comparison
 
-from src.infer import analyze_image_full
+from infer import analyze_image_full
 
 st.set_page_config(page_title="Cyber Forensic Dashboard",layout="wide")
 

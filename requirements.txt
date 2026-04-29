@@ -9,3 +9,6 @@ plotly
 tqdm
 seaborn
 gunicorn
+fastapi
+uvicorn
+tensorflow-cpu
